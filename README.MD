@@ -79,6 +79,15 @@ Arguments:
 * imageName - Name of the downloading image. You can determine what picture is tracking when invoking getTrackingImageInfo() by the name provided in this function
 * imageUrl - Url of the downloading image.
 
+### Delete tracking image
+window.mobileNativeInterface.deleteTrackingImage(imageName: String) - Deletes tracking image by name.
+
+Arguments:
+* imageName - Name of the downloading image. You can determine what picture is tracking when invoking getTrackingImageInfo() by the name provided in this function
+
+### Delete all tracking images
+window.mobileNativeInterface.clearImageTrackingList() - Clears list of tracking images.
+
 ### Image event
 
 Image position/rotation updates from native part via event 'onTrackingImagesUpdated'
