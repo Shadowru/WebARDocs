@@ -73,11 +73,16 @@ window.addEventListener("onTrackingPoseUpdated", (ev: any) => {
 
 ### Add tracking images
 
-window.mobileNativeInterface.addTrackingImageUrl(imageName: String, imageUrl: String) - Adds a new image by download URL.
+window.mobileNativeInterface.addTrackingImageUrl(imageName: String, imageUrl: String, imageWidth: String) - Adds a new image by download URL.
 
 Arguments:
 * imageName - Name of the downloading image. You can determine what picture is tracking when invoking getTrackingImageInfo() by the name provided in this function
 * imageUrl - Url of the downloading image.
+* imageWidth - Physical width of the image in meters AS JS STRING. Example - "0.7"
+
+```
+window.mobileNativeInterface.addTrackingImageUrl('1', 'https://example.com/1.png', "0.7")
+```
 
 ### Delete tracking image
 window.mobileNativeInterface.deleteTrackingImage(imageName: String) - Deletes tracking image by name.
